@@ -40,9 +40,9 @@ void printArray(char *array, int len)
 
 int main()
 {
+    int len = ARRAY_SIZE;
     char array[ARRAY_SIZE];
     memset(array, 0, sizeof(array));
-    int len = ARRAY_SIZE;
     for(int idx = 0; idx < ARRAY_SIZE; idx++)
     {
         array[idx] = rand() % RANGE_NUM;

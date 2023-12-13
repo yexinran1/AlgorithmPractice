@@ -53,7 +53,7 @@ void printArray(int *array, int len)
 }
 
 /* 去重 (双指针) */
-#if 1
+#if 0
 int remDuplicateNum(int *nums, int numsSize)
 {
     int num=0;
@@ -75,6 +75,23 @@ int remDuplicateNum(int *nums, int numsSize)
 }
 #endif
 
+#if 1
+
+int remDuplicateNum(int *array, int len)
+{
+    int pos = 1;
+    for(int idx = 1; idx < len; idx++)
+    {
+        if(array[idx] != array[idx - 1])
+        {
+            array[pos] = array[idx];
+            pos++;
+        }
+    }
+    return pos;
+}
+
+#endif
 
 int main()
 {
